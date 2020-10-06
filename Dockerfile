@@ -32,6 +32,7 @@ RUN apk --no-cache add openjdk11-jre bash && \
     firebase -V && \
     java -version && \
     chown -R node:node $HOME
+RUN npm i -g typescript tslint
 USER node
 VOLUME $HOME/.cache
 WORKDIR $HOME
